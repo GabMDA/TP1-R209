@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Formulaire.css">
+</head>
+<body>
+    <form id="contactForm" method="post" action="submit.php" onsubmit="return validateForm()">
+        <label for="pseudo">Pseudo:</label><br>
+        <input type="text" id="pseudo" name="pseudo" required><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="subject">Objet du message:</label><br>
+        <select id="subject" name="subject" required>
+          <option value="question">J'ai une question</option>
+          <option value="suggestion">Je fais une suggestion</option>
+          <option value="problem">Je rencontre un problème</option>
+          <option value="other">Autre</option>
+        </select><br>
+        <label for="message">Votre message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        <label for="urgency">Niveau d'urgence:</label><br>
+        <br><div class="urgency-buttons">
+            <button type="button" name="urgency" value="low">Lent</button>
+            <button type="button" name="urgency" value="medium">Moyen</button>
+            <button type="button" name="urgency" value="high">Urgent</button>
+          </div>
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy">J'accepte la politique de confidentialité</label><br>
+        <input type="submit" value="Envoyer">
+      </form>
+</body>
+</html>
